@@ -22,7 +22,7 @@
 
 3. 在 Actions 中运行 Recovery Build，填写参数：
    - `MANIFEST_URL`: `https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git`
-   - `MANIFEST_BRANCH`: `twrp-10` (Android 10 对应分支)
+   - `MANIFEST_BRANCH`: `twrp-12.1` (推荐) 或 `twrp-11`
    - `DEVICE_TREE_URL`: `https://github.com/henrycoding/twrp_device_hesc_sl8541e_1h10`
    - `DEVICE_TREE_BRANCH`: `main`
    - `DEVICE_PATH`: `device/hesc/sl8541e_1h10`
@@ -33,9 +33,9 @@
 ### 方法 2: 本地编译
 
 ```bash
-# 1. 初始化 TWRP 源码 (Android 10)
+# 1. 初始化 TWRP 源码 (twrp-12.1)
 mkdir twrp && cd twrp
-repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-10
+repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
 repo sync -j$(nproc) --force-sync
 
 # 2. 克隆设备树
