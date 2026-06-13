@@ -1,0 +1,2 @@
+add_lunch_combo twrp_sl8541e_1h10-eng
+add_lunch_combo twrp_sl8541e_1h10-userdebug
