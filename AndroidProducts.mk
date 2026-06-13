@@ -14,3 +14,7 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_sl8541e_1h10.mk
+
+COMMON_LUNCH_CHOICES := \
+    twrp_sl8541e_1h10-eng \
+    twrp_sl8541e_1h10-userdebug
