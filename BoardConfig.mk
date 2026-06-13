@@ -71,7 +71,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_ROOT_EXTRA_FOLDERS := etc vendor
 
 # TWRP specific
-TW_THEME := portrait_hdpi
+TW_THEME := portrait_mdpi
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -79,6 +79,12 @@ TW_BRIGHTNESS_PATH := /sys/class/backlight/sprd-brightness/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 128
 TARGET_USES_MKE2FS := true
+
+# Screen configuration for smartwatch (368x448)
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone0/temp
+DEVICE_RESOLUTION := 368x448
+DEVICE_SCREEN_WIDTH := 368
+DEVICE_SCREEN_HEIGHT := 448
 
 # Encryption
 TW_INCLUDE_CRYPTO := false
@@ -96,6 +102,11 @@ TW_EXCLUDE_SUPERSU := true
 
 # ADB
 TW_DEFAULT_ADB := true
+
+# Touch screen (may need adjustment)
+TW_IGNORE_MAJOR_AXIS_0 := true
+TW_NO_SCREEN_BLANK := true
+TW_NO_SCREEN_TIMEOUT := true
 
 # Android 10 specific
 PLATFORM_SECURITY_PATCH := 2025-12-31
