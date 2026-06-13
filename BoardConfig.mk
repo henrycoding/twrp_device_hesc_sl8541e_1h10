@@ -67,6 +67,11 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
+# Fix symlink conflicts
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /system/etc:etc \
+    /system/vendor:vendor
+
 # TWRP specific
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
