@@ -8,7 +8,8 @@
 | 品牌 | hesc |
 | 设备名 | sl8541e_1h10 |
 | 芯片 | 展锐 SL8541E |
-| Android版本 | 8.1 (SDK 27) |
+| Android版本 | 10 (API 29) |
+| LineageOS版本 | 17.x |
 | CPU架构 | ARM64 (arm64-v8a) |
 
 ## 使用方法
@@ -21,8 +22,8 @@
 
 3. 在 Actions 中运行 Recovery Build，填写参数：
    - `MANIFEST_URL`: `https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git`
-   - `MANIFEST_BRANCH`: `twrp-8.1` (Android 8.1 对应分支)
-   - `DEVICE_TREE_URL`: `https://github.com/你的用户名/twrp_device_hesc_sl8541e_1h10`
+   - `MANIFEST_BRANCH`: `twrp-10` (Android 10 对应分支)
+   - `DEVICE_TREE_URL`: `https://github.com/henrycoding/twrp_device_hesc_sl8541e_1h10`
    - `DEVICE_TREE_BRANCH`: `main`
    - `DEVICE_PATH`: `device/hesc/sl8541e_1h10`
    - `DEVICE_NAME`: `sl8541e_1h10`
@@ -32,13 +33,13 @@
 ### 方法 2: 本地编译
 
 ```bash
-# 1. 初始化 TWRP 源码
+# 1. 初始化 TWRP 源码 (Android 10)
 mkdir twrp && cd twrp
-repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1
+repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-10
 repo sync -j$(nproc) --force-sync
 
 # 2. 克隆设备树
-git clone <本设备树地址> -b main device/hesc/sl8541e_1h10
+git clone https://github.com/henrycoding/twrp_device_hesc_sl8541e_1h10 -b main device/hesc/sl8541e_1h10
 
 # 3. 编译
 source build/envsetup.sh

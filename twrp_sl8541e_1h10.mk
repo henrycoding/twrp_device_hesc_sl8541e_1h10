@@ -15,6 +15,9 @@
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
+# Inherit from TWRP common configuration
+$(call inherit-product, vendor/twrp/config/common.mk)
+
 # Inherit from device.mk
 $(call inherit-product, device/hesc/sl8541e_1h10/device.mk)
 
