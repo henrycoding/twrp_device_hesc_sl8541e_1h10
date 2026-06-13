@@ -14,8 +14,8 @@
 
 LOCAL_PATH := device/hesc/sl8541e_1h10
 
-# Inherit from the common TWRP configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Inherit from the common Omni configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
