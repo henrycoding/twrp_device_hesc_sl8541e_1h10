@@ -16,4 +16,8 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),sl8541e_1h10)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
+
+# Fix rsync symlink conflicts before building recovery
+$(intermediates)/ramdisk_files-timestamp: PRIVATE_FIX_SYMLINKS := true
+
 endif

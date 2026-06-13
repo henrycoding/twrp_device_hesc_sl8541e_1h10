@@ -29,6 +29,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery.fstab:recovery/root/etc/recovery.fstab
 
+# Pre-build fix for rsync symlink conflicts
+$(shell rm -rf $(OUT)/recovery/root/etc 2>/dev/null)
+$(shell rm -rf $(OUT)/recovery/root/vendor 2>/dev/null)
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
